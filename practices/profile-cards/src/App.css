@@ -1,0 +1,25 @@
+.profile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+@media (max-width: 768px) {
+  .profile-wrapper {
+    gap: 20px;
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-wrapper {
+    gap: 20px;
+    padding: 24px 16px;
+  }
+}
