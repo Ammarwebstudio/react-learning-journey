@@ -1,0 +1,153 @@
+.counter {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 320px);
+  padding: 26px 22px 28px;
+  text-align: center;
+  background: var(--card);
+  border: 2px solid var(--card-border);
+  border-radius: 34px;
+  box-shadow: 0 22px 44px rgba(95, 122, 74, 0.2);
+}
+
+.counter__label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+
+.counter__plant {
+  display: block;
+  width: 150px;
+  height: 137px;
+  margin: 6px auto 0;
+  overflow: visible;
+}
+
+.plant {
+  transform-origin: 60px 72px;
+  transform: scale(var(--s, 0.55));
+  transition: transform 0.55s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.plant--wiggle {
+  animation: wiggle 0.5s ease;
+}
+
+.plant__flower {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.plant__flower--visible {
+  opacity: 1;
+}
+
+.counter__value {
+  display: block;
+  margin-top: 2px;
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  animation: pop 0.38s cubic-bezier(0.2, 1.5, 0.4, 1);
+}
+
+.counter__caption {
+  display: inline-block;
+  margin: 4px 0 24px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--chip-text);
+  background: var(--chip-bg);
+  border-radius: 999px;
+}
+
+.counter__buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(3px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+.btn--decrement {
+  color: var(--sand-text);
+  background: var(--sand);
+  border: 2px solid var(--sand-border);
+  box-shadow: 0 5px 0 var(--sand-border);
+}
+
+.btn--decrement:active {
+  box-shadow: 0 2px 0 var(--sand-border);
+}
+
+.btn--increment {
+  color: var(--cream-text);
+  background: var(--green);
+  border: 2px solid var(--green);
+  box-shadow: 0 5px 0 var(--green-dark);
+}
+
+.btn--increment:active {
+  box-shadow: 0 2px 0 var(--green-dark);
+}
+
+.counter--shake {
+  animation: shake 0.3s ease;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0.3;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes wiggle {
+  25% {
+    transform: scale(var(--s)) rotate(-5deg);
+  }
+  75% {
+    transform: scale(var(--s)) rotate(5deg);
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}

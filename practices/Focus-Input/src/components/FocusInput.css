@@ -1,0 +1,64 @@
+.focus-box {
+  width: 480px;
+  max-width: 100%;
+  padding: 20px 16px;
+  background: var(--card);
+  border: 2px solid var(--card-border);
+  border-radius: 20px;
+}
+
+.focus-box__input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  font-size: 15px;
+  color: var(--text);
+  background: #fff;
+  border: 2px solid var(--sand-border);
+  border-radius: 12px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.focus-box__input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(107, 142, 78, 0.25);
+}
+
+.focus-box__btn {
+  width: 100%;
+  height: 46px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cream-text);
+  background: var(--green);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.focus-box__btn:hover {
+  transform: translateY(-2px);
+}
+
+.focus-box__btn:active {
+  transform: scale(0.97);
+}
+
+.focus-box__status {
+  margin-top: 14px;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--chip-bg);
+  border-radius: 12px;
+}
+
+.focus-box__status b {
+  color: var(--green-dark);
+}

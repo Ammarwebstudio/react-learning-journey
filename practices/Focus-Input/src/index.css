@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap");
+
+:root {
+  --bg: #efe6d0;
+  --card: #fbf7ec;
+  --card-border: #e6dcc0;
+  --text: #34492f;
+  --green: #6b8e4e;
+  --green-dark: #4f6e38;
+  --sand-border: #d3c49f;
+  --chip-bg: #e3ebd2;
+  --cream-text: #fff8e8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Nunito",
+    ui-rounded,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+button,
+input {
+  font: inherit;
+}
